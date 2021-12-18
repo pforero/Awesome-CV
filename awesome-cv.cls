@@ -21,7 +21,7 @@
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
-\ProvidesClass{awesome-cv}[2017/02/05 v1.6.1 Awesome Curriculum Vitae Class]
+\ProvidesClass{awesome-cv}[2021/12/17 v1.6.1 Awesome Moderna Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
 
@@ -145,7 +145,18 @@
 \definecolor{awesome-nephritis}{HTML}{27AE60}
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
-\colorlet{awesome}{awesome-red}
+% Moderna Colors
+\definecolor{mrna-charcoal}{RGB}{64, 64, 64}
+\definecolor{mrna-blue}{RGB}{17, 78, 130}
+\definecolor{mrna-moderna-red}{RGB}{227, 24, 55}
+\definecolor{mrna-moderna-gold}{RGB}{248, 151, 29}
+\definecolor{mrna-moderna-green}{RGB}{122, 193, 67}
+\definecolor{mrna-moderna-blue}{RGB}{0, 174, 239}
+\definecolor{mrna-grape}{RGB}{143, 34, 138}
+\definecolor{mrna-merlot}{RGB}{117, 24, 55}
+
+\colorlet{awesome}{mrna-moderna-red}
+\colorlet{text}{mrna-charcoal}
 
 % Boolean value to switch section color highlighting
 \newbool{acvSectionColorHighlight}
@@ -162,22 +173,22 @@
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
 \setfontfamily\FA[Path=\@fontdir]{FontAwesome}
-% Set font for header (default is Roboto)
+% Set font for header (default is Century Gothic)
 \newfontfamily\headerfont[
   Path=\@fontdir,
   UprightFont=*-Regular,
   ItalicFont=*-Italic,
   BoldFont=*-Bold,
   BoldItalicFont=*-BoldItalic,
-]{Roboto}
+]{Gothic}
 
 \newfontfamily\headerfontlight[
   Path=\@fontdir,
-  UprightFont=*-Thin,
-  ItalicFont=*-ThinItalic,
-  BoldFont=*-Medium,
-  BoldItalicFont=*-MediumItalic,
-]{Roboto}
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-BoldItalic,
+]{Gothic}
 
 \newcommand*{\footerfont}{\sourcesanspro}
 \newcommand*{\bodyfont}{\sourcesanspro}
@@ -188,15 +199,15 @@
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{graytext} #1}}
+\newcommand*{\headerfirstnamestyle}[1]{{\fontsize{32pt}{1em}\headerfontlight\color{text} #1}}
 \newcommand*{\headerlastnamestyle}[1]{{\fontsize{32pt}{1em}\headerfont\bfseries\color{text} #1}}
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
+\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\headerfont\MakeLowercase{\color{awesome} #1}}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
-\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
+\newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\headerfont\MakeLowercase{\color{awesome} #1}}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{mrna-blue}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
@@ -224,7 +235,7 @@
 \newcommand*{\skillsetstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\color{text} #1}}
 
 % For elements of the cover letter
-\newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
+\newcommand*{\lettersectionstyle}[1]{{\fontsize{14pt}{1em}\headerfont\MakeLowercase{\color{awesome} #1}}}
 \newcommand*{\recipientaddressstyle}[1]{{\fontsize{9pt}{1em}\bodyfont\scshape\color{graytext} #1}}
 \newcommand*{\recipienttitlestyle}[1]{{\fontsize{11pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
 \newcommand*{\lettertitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\bfseries\color{darktext} \underline{#1}}}
@@ -584,7 +595,7 @@
   \vspace{\acvSectionTopSkip}
   \sectionstyle{#1}
   \phantomsection
-  \color{gray}\vhrulefill{0.9pt}
+  \color{mrna-moderna-blue}\vhrulefill{0.9pt}
 }
 
 % Define a subsection for CV
@@ -717,8 +728,9 @@
   \par\addvspace{2.5ex}
   \phantomsection{}
   \lettersectionstyle{#1}
-  \color{gray}\vhrulefill{0.9pt}
+  \color{mrna-moderna-blue}\vhrulefill{0.9pt}
   \par\nobreak\addvspace{0.4ex}
+  \color{text}
 }
 
 % Define a title of the cover letter
@@ -735,7 +747,7 @@
   \end{singlespace}
   \ifthenelse{\isundefined{\@lettertitle}}
     {}
-    {\lettertitlestyle{\@lettertitle} \\}
+    {\lettertitlestyle{\@lettertitle} \\} \\
   \lettertextstyle{\@letteropening}
 }
 

@@ -1,0 +1,127 @@
+%% cSpell: language en,es
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+% \colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{E31837}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{404040}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+%\photo[circle,noedge,left]{./examples/profile}
+\name{Pilar}{Acedo-Rico}
+\position{Quality Assurance{\enskip\cdotp\enskip}Drug Product}
+\address{Av. de Valdemarin 91A 1ºD, 28023, Madrid, Spain}
+
+\mobile{(+34) 654 475 314}
+\email{pilar.acedo.rico@modernatx.com}
+%\homepage{pabloforero.eu}
+%\github{pforero}
+\linkedin{pilar-acedo-rico}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+%\quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Company Recruitment Team}
+  {Google Inc.\\1600 Anfiteatro Parkway\\Mountain View, CA 94043}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Solicitud de trabajo como Puesto de Trabajo}
+% How the letter is opened
+\letteropening{Estimado Don/Doña,}
+% How the letter is closed
+\letterclosing{Un Saludo,}
+% Any enclosures with the letter
+\letterenclosure[Adjunto]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Pilar Acedo-Rico~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{Sobre Mi}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\lettersection{¿Por qué EMPRESA?}
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+\lettersection{¿Por qué Yo?}
+
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+\end{document}
+
+%% cSpell: ignore modelación
